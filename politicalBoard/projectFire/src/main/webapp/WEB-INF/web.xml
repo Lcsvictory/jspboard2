@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>WebMarket</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+
+  
+  <!-- 세션 지속시간 20으로 설정 -->
+  <session-config>
+  	<session-timeout>20</session-timeout>
+  </session-config>
+  
+ <!-- 모든 페이지에서 문자열인코딩은 utf-8로 해라 -->
+ <filter>
+ 	<filter-name>SetCharEncoding</filter-name>
+ 	<filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+ 	<init-param>
+ 		<param-name>encoding</param-name>
+ 		<param-value>utf-8</param-value>
+ 	</init-param>
+ </filter>
+ <filter-mapping>
+ 	<filter-name>SetCharEncoding</filter-name>
+ 	<url-pattern>/*</url-pattern>
+ </filter-mapping>
+ 
+ <!-- 한번에 보여줄 페이지 수, 페이지 블록 수 -->
+ <context-param>
+ 	<param-name>POSTS_PER_PAGE</param-name>
+ 	<param-value>10</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>PAGES_PER_BLOCK</param-name>
+ 	<param-value>10</param-value>
+ </context-param>
+ 
+ <context-param>
+ 	<param-name>AD_LEFT</param-name>
+ 	<param-value>img/폴드2광고.jpg</param-value>
+ </context-param>
+ <context-param>
+ 	<param-name>AD_RIGHT</param-name>
+ 	<param-value>img/소주광고차은우.jpg</param-value>
+ </context-param>
+ 
+ 
+ 
+</web-app>
