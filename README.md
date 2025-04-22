@@ -8,7 +8,7 @@ JSP와 MySQL을 사용한 게시판 프로젝트입니다. Docker를 사용하�
 
 1. 프로젝트 클론:
 ```bash
-git clone [repository-url]
+git clone https://github.com/Lcsvictory/jspboard2
 cd LnR
 ```
 
